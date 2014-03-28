@@ -2,10 +2,10 @@
  <h1> Supporters </h1>
 <p><% @supporters.each do |supporter| %>
 
-<p><%= link_to supporter.name %></p>
+<p><%= link_to supporter.name, supporter_path(supporter) %></p>
 <p><%= supporter.email %></p>
 <p><%= supporter.department %></p>
 <hr>
 <% end %>
 
-<%= link_to "new", new_supporter_path(@supporter) %>
+<%= link_to "New", new_supporter_path(@supporter) %>
