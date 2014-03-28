@@ -1,0 +1,11 @@
+
+ <h1> Supporters </h1>
+<p><% @supporters.each do |supporter| %>
+
+<p><%= link_to supporter.name %></p>
+<p><%= supporter.email %></p>
+<p><%= supporter.department %></p>
+<hr>
+<% end %>
+
+<%= link_to "new", new_supporter_path(@supporter) %>

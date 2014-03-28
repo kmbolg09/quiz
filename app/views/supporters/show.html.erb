@@ -1,0 +1,11 @@
+<h1> <%= @supporter.name %></h1>
+<p><%= @supporters.email %></p>
+<p><%= @supporters.department %></p>
+<p><%= @supporters.comment %></p>
+
+<%= link_to "Edit", edit_supporters_path(@supporter) %>
+<br> 
+<%= link_to "All Supporters", supporters_path %>
+<%= button_to "Delete", @question, method: :delete, data: {
+  confirm: "Are you sure you want to delete this supporter?"
+} %>

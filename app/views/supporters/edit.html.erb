@@ -1,0 +1,21 @@
+<h1> Editing Supporter</h1>
+<%= form_for @supporter do |f| %>
+  <%= f.label :name, "supporter name" %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :email, "supporter email" %>
+  <%= f.text_field :email %>
+<br>
+<%= f.radio_button :department, 'sales', :checked => true %>
+ <%= label :department_sales, 'Sales' %>
+ <%= f.radio_button :department, 'marketing', :checked => true %>
+ <%= label :department_marketing, 'marketing' %>
+ <%= f.radio_button :department, 'technical', :checked => true %>
+
+ <%= label :department_technical, 'technical' %>
+   <%= f.label :comment, "supporter comment" %>
+  <%= f.text_area :comment %>
+
+  <%= f.submit "Save" (@supporter.persisted ? "Update" : "Save"), class: "btn btn-primary" %>
+  <% end %>

@@ -1,0 +1,24 @@
+<%= form_for @supporter do |f| %>
+  <%= f.label for :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label for :email %>
+  <%= f.text_field :email %>
+  <br>
+
+ <%= f.radio_button :department, 'sales', :checked => true %>
+ <%= label  :department_sales, 'Sales' %>
+ <%= f.radio_button :department, 'marketing', :checked => true %>
+ <%= label  :department_marketing, 'marketing' %>
+ <%= f.radio_button :department, 'technical', :checked => true %>
+ <%= label  :department_technical, 'technical' %>
+  <br>
+  <%= f.label for :message %>
+  <%= f.text_area :message %>
+  <br>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+
+  <% end %>
+
+
